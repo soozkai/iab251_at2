@@ -1,0 +1,24 @@
+<Window x:Class="iab251_at2.CustomerDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Customer Dashboard" Height="450" Width="600"
+        Background="#FFFFFF"  
+    WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Welcome to the Customer Dashboard" FontSize="24" FontWeight="Bold" 
+                       Margin="0,0,0,20" HorizontalAlignment="Center" Foreground="#FF8C00"/>
+
+            <TextBlock Text="Your options:" FontSize="16" Margin="0,0,0,20" HorizontalAlignment="Center" Foreground="Black"/>
+
+            <!-- Buttons for different actions with styling -->
+            <Button Content="View Quotations" Width="200" Height="40" Click="ViewQuotations_Click" Margin="0,5" 
+                    Background="#FF8C00" Foreground="Black"/>
+            <Button Content="Profile" Width="200" Height="40" Click="Profile_Click" Margin="0,5" 
+                    Background="#FF8C00" Foreground="Black"/>
+            <Button Content="Log Out" Width="200" Height="40" Click="Logout_Click" Margin="0,5" 
+                    Background="#FF8C00" Foreground="Black"/>
+        </StackPanel>
+    </Grid>
+</Window>

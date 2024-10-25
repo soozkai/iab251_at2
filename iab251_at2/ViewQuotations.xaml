@@ -1,0 +1,21 @@
+<Window x:Class="iab251_at2.ViewQuotations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="View Quotations" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <!-- Title -->
+        <TextBlock Text="Quotation List" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0, 10, 0, 20"/>
+
+        <!-- DataGrid to Display Quotations -->
+        <DataGrid x:Name="QuotationDataGrid" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Quotation Number" Binding="{Binding QuotationNumber}" Width="*"/>
+                <DataGridTextColumn Header="Client Name" Binding="{Binding ClientName}" Width="*"/>
+                <DataGridTextColumn Header="Date Issued" Binding="{Binding DateIssued, StringFormat=d}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
