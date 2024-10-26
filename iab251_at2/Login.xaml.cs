@@ -39,6 +39,19 @@ namespace iab251_at2
             {
                 MessageBox.Show("Invalid username or password.", "Authentication Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            bool isEmployee = true;
+            if (isEmployee)
+            {
+                EmployeeDashboard employeeDashboard = new EmployeeDashboard();
+                employeeDashboard.Show();
+                //close the login meny
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Authentication Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private string HashPassword(string password)
