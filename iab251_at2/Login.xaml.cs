@@ -3,10 +3,11 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Security.Cryptography;
+using System.Windows.Controls;
 
 namespace iab251_at2
 {
-    public partial class Login : Window
+    public partial class Login : Page
     {
         public Login()
         {
@@ -15,10 +16,10 @@ namespace iab251_at2
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextBox.Text; // Get the email as the username
-            string password = PasswordBox.Password; // Get the entered password
+            string username = UsernameTextBox.Text; 
+            string password = PasswordBox.Password; 
 
-            // Simple input validation
+     
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter both username and password.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -32,21 +33,9 @@ namespace iab251_at2
             if (employee != null)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                // Navigate to the next page (e.g., dashboard)
-                this.Close(); // Close the login window
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.", "Authentication Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
 
-            bool isEmployee = true;
-            if (isEmployee)
-            {
-                EmployeeDashboard employeeDashboard = new EmployeeDashboard();
-                employeeDashboard.Show();
-                //close the login meny
-                this.Close();
+                // Navigate to the EmployeeDashboard page
+                NavigationService?.Navigate(new EmployeeDashboard());
             }
             else
             {
@@ -70,7 +59,8 @@ namespace iab251_at2
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close(); // Close the login window
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow?.ShowMainOptions(); 
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\App.xaml
-6-722097351
+8-1815927830
 
-1234654870
+14-447848103
 1981124507420
-CustomerDashboard.xaml;CustomerRegistration.xaml;EmployeeRegistration.xaml;Login.xaml;MainWindow.xaml;ViewQuotations.xaml;
+CustomerDashboard.xaml;CustomerRegistration.xaml;EmployeeDashboard.xaml;EmployeeRegistration.xaml;Login.xaml;MainWindow.xaml;QuotationDetails.xaml;ViewQuotations.xaml;
 
 False
 

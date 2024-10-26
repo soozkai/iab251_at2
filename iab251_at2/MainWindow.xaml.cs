@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace iab251_at2
 {
@@ -9,28 +10,35 @@ namespace iab251_at2
             InitializeComponent();
         }
 
-        // Register as Customer button click handler
+        // Navigate to Customer Registration page
         private void RegisterCustomer_Click(object sender, RoutedEventArgs e)
         {
-            // Open the customer registration window
-            CustomerRegistration customerRegistrationWindow = new CustomerRegistration();
-            customerRegistrationWindow.ShowDialog(); // Show as a modal dialog
+            MainOptionsContainer.Visibility = Visibility.Collapsed;
+            MainFrame.Visibility = Visibility.Visible;
+            MainFrame.Navigate(new CustomerRegistration());  
         }
 
-        // Register as Employee button click handler
+        // Navigate to Employee Registration page
         private void RegisterEmployee_Click(object sender, RoutedEventArgs e)
         {
-            // Open the employee registration window
-            EmployeeRegistration employeeRegistrationWindow = new EmployeeRegistration();
-            employeeRegistrationWindow.ShowDialog(); // Show as a modal dialog
+            MainOptionsContainer.Visibility = Visibility.Collapsed;
+            MainFrame.Visibility = Visibility.Visible;
+            MainFrame.Navigate(new EmployeeRegistration());  
         }
 
-        // Log In button click handler
+        // Navigate to Login page
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            // Open the login window
-            Login loginWindow = new Login();
-            loginWindow.ShowDialog(); // Show as a modal dialog
+            MainOptionsContainer.Visibility = Visibility.Collapsed;
+            MainFrame.Visibility = Visibility.Visible;
+            MainFrame.Navigate(new Login());  
+        }
+
+      
+        public void ShowMainOptions()
+        {
+            MainOptionsContainer.Visibility = Visibility.Visible;
+            MainFrame.Visibility = Visibility.Collapsed;
         }
     }
 }

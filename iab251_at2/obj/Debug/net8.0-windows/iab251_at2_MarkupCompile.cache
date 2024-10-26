@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\Users\conno\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\
 iab251_at2
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-c:\Users\conno\Desktop\University\iab251_at2\iab251_at2\App.xaml
-71321668348
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\App.xaml
+8-1815927830
 
-11-1626499418
-198-635017904
-CustomerDashboard.xaml;CustomerRegistration.xaml;EmployeeDashboard.xaml;EmployeeRegistration.xaml;Login.xaml;MainWindow.xaml;ViewQuotations.xaml;
+12-327067430
+1981124507420
+CustomerDashboard.xaml;CustomerRegistration.xaml;EmployeeDashboard.xaml;EmployeeRegistration.xaml;Login.xaml;MainWindow.xaml;QuotationDetails.xaml;ViewQuotations.xaml;
 
 False
 

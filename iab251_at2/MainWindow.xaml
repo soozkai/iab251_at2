@@ -8,12 +8,9 @@
         Background="#FFFFFF" 
         WindowStartupLocation="CenterScreen">
 
-    <!-- Define Styles and Effects in Resources -->
     <Window.Resources>
-        <!-- Define DropShadowEffect -->
         <DropShadowEffect x:Key="DropShadowEffect" BlurRadius="10" ShadowDepth="5" Opacity="0.5" Color="Black" />
 
-        <!-- Define Modern Button Style -->
         <Style x:Key="ModernButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#FF8C00"/>
             <Setter Property="Foreground" Value="White"/>
@@ -27,24 +24,20 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                                Padding="10" CornerRadius="5">
+                        <Border Background="{TemplateBinding Background}" Padding="10" CornerRadius="5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <!-- Hover Effect -->
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#FF7F00"/>
-                    <!-- Darker Orange on hover -->
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
 
-    <!-- Main Layout -->
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <!-- Background Gradient -->
         <Grid.Background>
@@ -54,25 +47,21 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <!-- Main Card (like a card in web design) -->
-        <Border Background="White" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="10" Padding="30"
+        <!-- Frame for Page Navigation -->
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Visibility="Collapsed" />
+
+        <!-- Main Options Card -->
+        <Border x:Name="MainOptionsContainer" Background="White" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="10" Padding="30"
                 HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Height="Auto"
                 Effect="{StaticResource DropShadowEffect}">
             <StackPanel>
-                <!-- Title Section -->
                 <TextBlock Text="Interport Cargo" FontSize="28" FontWeight="Bold" Foreground="#333333"
                            HorizontalAlignment="Center" Margin="0, 0, 0, 20" />
                 <TextBlock Text="Your Freight &amp; Customs Solution" FontSize="16" Foreground="#777777"
                            HorizontalAlignment="Center" Margin="0, 0, 0, 20"/>
-
-                <!-- Register as Customer -->
-                <Button Content="Register as Customer" Click="RegisterCustomer_Click" Style="{StaticResource ModernButtonStyle}" Height="43" Width="215"/>
-
-                <!-- Register as Employee -->
-                <Button Content="Register as Employee" Click="RegisterEmployee_Click" Style="{StaticResource ModernButtonStyle}" Height="43" Width="215"/>
-
-                <!-- Log In -->
-                <Button Content="Log In" Click="Login_Click" Style="{StaticResource ModernButtonStyle}" Height="44" Width="215"/>
+                <Button Content="Register as Customer" Click="RegisterCustomer_Click" Style="{StaticResource ModernButtonStyle}"/>
+                <Button Content="Register as Employee" Click="RegisterEmployee_Click" Style="{StaticResource ModernButtonStyle}"/>
+                <Button Content="Log In" Click="Login_Click" Style="{StaticResource ModernButtonStyle}"/>
             </StackPanel>
         </Border>
     </Grid>

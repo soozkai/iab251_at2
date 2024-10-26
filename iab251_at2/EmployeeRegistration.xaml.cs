@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace iab251_at2
 {
-    public partial class EmployeeRegistration : Window
+    public partial class EmployeeRegistration : Page
     {
         public class Employee
         {
@@ -15,9 +15,9 @@ namespace iab251_at2
             public string FamilyName { get; set; } = string.Empty;
             public string Email { get; set; } = string.Empty;
             public string PhoneNumber { get; set; } = string.Empty;
-            public string EmployeeType { get; set; } = string.Empty;
+            public string EmployeeType { get; set; } = string.Empty; // Will hold selected employee type
             public string Address { get; set; } = string.Empty;
-            public string HashedPassword { get; set; } = string.Empty;
+            public string HashedPassword { get; set; } = string.Empty; // Store password securely
         }
 
         public static readonly List<Employee> employeeList = new List<Employee>();
@@ -51,21 +51,23 @@ namespace iab251_at2
                 FamilyName = FamilyNameTextBox.Text,
                 Email = EmailTextBox.Text,
                 PhoneNumber = PhoneNumberTextBox.Text,
-                EmployeeType = (EmployeeTypeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
+                EmployeeType = (EmployeeTypeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString(), 
                 Address = AddressTextBox.Text,
                 HashedPassword = hashedPassword
             };
 
             employeeList.Add(newEmployee);
 
-            // Show success message and close the window
+            
             MessageBox.Show("Employee registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            this.Close(); // Close the window after successful registration
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow?.ShowMainOptions();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow?.ShowMainOptions(); 
         }
 
         private void ClearFields()

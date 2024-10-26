@@ -1,9 +1,10 @@
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace iab251_at2
 {
-    public partial class EmployeeDashboard : Window
+    public partial class EmployeeDashboard : Page
     {
         public EmployeeDashboard()
         {
@@ -16,7 +17,7 @@ namespace iab251_at2
             ViewQuotations viewQuotationsWindow = new ViewQuotations();
             viewQuotationsWindow.Show();
             //close the dashboard window
-            this.Close();
+            NavigationService?.GoBack();
         }
 
         private void LogoutButton_Click(Object sender, RoutedEventArgs e)
@@ -24,8 +25,7 @@ namespace iab251_at2
             //Logic to logout and return back to the main menu (login/registration screen)
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            //close the window
-            this.Close();
+            NavigationService?.GoBack();
         }
     }
 }

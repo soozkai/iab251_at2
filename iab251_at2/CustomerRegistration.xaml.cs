@@ -2,10 +2,11 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace iab251_at2
 {
-    public partial class CustomerRegistration : Window
+    public partial class CustomerRegistration : Page
     {
         // Class to store customer details in memory
         public class Customer
@@ -65,13 +66,14 @@ namespace iab251_at2
             ClearFields();
         }
 
-        // Cancel Button Click Event (Close the window)
+
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow?.ShowMainOptions(); // Directly show the main menu
         }
 
-        // Helper method to clear all fields after registration
+        
         private void ClearFields()
         {
             FirstNameTextBox.Clear();
@@ -83,7 +85,7 @@ namespace iab251_at2
             PasswordBox.Clear();
         }
 
-        // Helper method to hash passwords (SHA-256)
+  
         private string HashPassword(string password)
         {
             using (SHA256 sha256Hash = SHA256.Create())
