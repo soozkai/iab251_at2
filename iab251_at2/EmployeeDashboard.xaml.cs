@@ -22,7 +22,7 @@ namespace iab251_at2
 
         private void LogoutButton_Click(Object sender, RoutedEventArgs e)
         {
-            //Logic to logout and return back to the main menu (login/registration screen)
+            
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             NavigationService?.GoBack();

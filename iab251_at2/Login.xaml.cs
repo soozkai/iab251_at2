@@ -16,10 +16,9 @@ namespace iab251_at2
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextBox.Text; 
-            string password = PasswordBox.Password; 
+            string username = UsernameTextBox.Text;
+            string password = PasswordBox.Password;
 
-     
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter both username and password.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -32,15 +31,28 @@ namespace iab251_at2
 
             if (employee != null)
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Login successful! Welcome, employee.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 // Navigate to the EmployeeDashboard page
                 NavigationService?.Navigate(new EmployeeDashboard());
+                return;
             }
-            else
+
+            // Check against registered customers
+            var customer = CustomerRegistration.customerList
+                .FirstOrDefault(c => c.Email == username && c.HashedPassword == HashPassword(password));
+
+            if (customer != null)
             {
-                MessageBox.Show("Invalid username or password.", "Authentication Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Login successful! Welcome, customer.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // Navigate to the CustomerDashboard page
+                NavigationService?.Navigate(new CustomerDashboard());
+                return;
             }
+
+            // If no match is found in either list
+            MessageBox.Show("Invalid username or password.", "Authentication Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private string HashPassword(string password)

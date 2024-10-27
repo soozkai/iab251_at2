@@ -30,7 +30,13 @@ c:\Users\conno\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows
 c:\Users\conno\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\ref\iab251_at2.dll
 c:\Users\conno\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\EmployeeDashboard.baml
 c:\Users\conno\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\EmployeeDashboard.g.cs
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.exe
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.deps.json
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.runtimeconfig.json
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.dll
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.pdb
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerDashboard.baml
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationOverview.baml
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerRegistration.baml
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\EmployeeDashboard.baml
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\EmployeeRegistration.baml
@@ -40,6 +46,7 @@ C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\Quot
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\ViewQuotations.baml
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\App.baml
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerDashboard.g.cs
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationOverview.g.cs
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerRegistration.g.cs
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\EmployeeDashboard.g.cs
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\EmployeeRegistration.g.cs
@@ -55,13 +62,10 @@ C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab2
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab251_at2.AssemblyInfo.cs
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab251_at2.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab251_at2.sourcelink.json
-C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.exe
-C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.deps.json
-C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.runtimeconfig.json
-C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.dll
-C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\bin\Debug\net8.0-windows\iab251_at2.pdb
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab251_at2.dll
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\refint\iab251_at2.dll
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab251_at2.pdb
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\iab251_at2.genruntimeconfig.cache
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\ref\iab251_at2.dll
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationDetails.baml
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationDetails.g.cs

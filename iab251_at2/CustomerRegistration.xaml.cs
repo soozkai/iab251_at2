@@ -21,7 +21,7 @@ namespace iab251_at2
         }
 
         // A simple in-memory storage for customers
-        private static readonly List<Customer> customerList = new List<Customer>();
+        public static readonly List<Customer> customerList = new List<Customer>();
 
         public CustomerRegistration()
         {

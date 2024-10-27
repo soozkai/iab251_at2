@@ -4,6 +4,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+        <!-- Modern Button Style -->
         <Style x:Key="ModernButtonStyle" TargetType="Button">
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -29,6 +30,7 @@
             </Style.Triggers>
         </Style>
 
+        <!-- Gray Button Style -->
         <Style x:Key="GrayButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Gray"/>
             <Setter Property="Foreground" Value="White"/>
@@ -40,5 +42,16 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
+
+        <!-- Larger Row Style for ListView -->
+        <Style x:Key="LargerRowStyle" TargetType="ListViewItem">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#F4F4F4"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
     </Application.Resources>
 </Application>
