@@ -1,8 +1,9 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace iab251_at2
 {
-    public partial class CustomerDashboard : Window
+    public partial class CustomerDashboard : Page
     {
         public CustomerDashboard()
         {
@@ -12,8 +13,7 @@ namespace iab251_at2
         // Method to handle viewing quotations
         private void ViewQuotations_Click(object sender, RoutedEventArgs e)
         {
-            // Logic to display quotations
-            MessageBox.Show("Viewing Quotations");
+            NavigationService?.Navigate(new CustomerQuotationOverview());
         }
 
         // Method to handle profile access
@@ -28,7 +28,9 @@ namespace iab251_at2
         {
             // Logic to log out the user
             MessageBox.Show("Logging out");
-            this.Close(); // Close the dashboard
+
+            // Navigate back to the login page or main page
+            NavigationService?.Navigate(new Login()); 
         }
     }
 }

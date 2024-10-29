@@ -9,12 +9,21 @@ iab251_at2
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+<<<<<<< HEAD
 c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\App.xaml
 8-1815927830
 
 12-327067430
 198-635017904
 CustomerDashboard.xaml;CustomerRegistration.xaml;EmployeeDashboard.xaml;EmployeeRegistration.xaml;Login.xaml;MainWindow.xaml;QuotationDetails.xaml;ViewQuotations.xaml;
+=======
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\App.xaml
+10221555799
+
+14662219708
+1981124507420
+CustomerDashboard.xaml;CustomerQuotationDetails.xaml;CustomerQuotationOverview.xaml;CustomerRegistration.xaml;EmployeeDashboard.xaml;EmployeeRegistration.xaml;Login.xaml;MainWindow.xaml;QuotationDetails.xaml;ViewQuotations.xaml;
+>>>>>>> d820d5ba4a13c3cff4e1f27cd8883035211682e6
 
 False
 

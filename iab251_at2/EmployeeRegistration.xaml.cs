@@ -17,7 +17,7 @@ namespace iab251_at2
             public string PhoneNumber { get; set; } = string.Empty;
             public string EmployeeType { get; set; } = string.Empty; // Will hold selected employee type
             public string Address { get; set; } = string.Empty;
-            public string HashedPassword { get; set; } = string.Empty; // Store password securely
+            public string HashedPassword { get; set; } = string.Empty; 
         }
 
         public static readonly List<Employee> employeeList = new List<Employee>();
