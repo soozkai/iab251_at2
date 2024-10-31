@@ -107,3 +107,9 @@ c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationDetails.baml
 C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationDetails.g.cs
 >>>>>>> d820d5ba4a13c3cff4e1f27cd8883035211682e6
+c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationDetails.baml
+c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationOverview.baml
+c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationDetails.g.cs
+c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationOverview.g.cs
+c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\RateSchedule.baml
+c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\RateSchedule.g.cs

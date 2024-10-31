@@ -50,6 +50,9 @@
                 <!-- View Quotations Button -->
                 <Button Content="View Quotation Requests" Click="ViewQuotationsButton_Click" Style="{StaticResource ModernButtonStyle}" />
 
+                <!--View Rate Schedule-->
+                <Button Content="View Rate Schedule" Click="ViewRateScheduleButton_Click" Style="{StaticResource ModernButtonStyle}"/>
+                
                 <!-- Logout Button -->
                 <Button Content="Logout" Click="LogoutButton_Click" Width="100" Height="40" HorizontalAlignment="Center"
                         Background="Gray" Foreground="White" FontSize="16" FontFamily="Segoe UI" Margin="0, 20, 0, 0" 

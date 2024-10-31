@@ -20,6 +20,13 @@ namespace iab251_at2
             NavigationService?.GoBack();
         }
 
+        //View the rate schedule button
+        private void ViewRateScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+            RateSchedule rateScheduleWindow = new RateSchedule();
+            rateScheduleWindow.ShowDialog();
+        }
+
         private void LogoutButton_Click(Object sender, RoutedEventArgs e)
         {
             
