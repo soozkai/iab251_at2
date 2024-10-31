@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2.Tests\obj\Debug\net8.0\iab251_at2.Tests.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2.Tests\obj\Debug\net8.0\iab251_at2.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2.Tests\obj\Debug\net8.0\iab251_at2.Tests.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2.Tests\obj\Debug\net8.0\iab251_at2.Tests.AssemblyInfo.cs
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2.Tests\obj\Debug\net8.0\iab251_at2.Tests.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2.Tests\obj\Debug\net8.0\iab251_at2.Tests.sourcelink.json

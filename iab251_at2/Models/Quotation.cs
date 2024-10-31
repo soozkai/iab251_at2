@@ -1,4 +1,6 @@
-﻿namespace iab251_at2.Models
+﻿using System;
+
+namespace iab251_at2.Models
 {
     public class Quotation
     {
@@ -6,6 +8,7 @@
         public string ClientName { get; set; } = string.Empty;
         public DateTime DateIssued { get; set; }
         public string Status { get; set; } = string.Empty;
+        public string Decision { get; set; } = "Pending"; // Tracks customer decision (Pending, Accepted, Rejected)
         public string ContainerType { get; set; } = string.Empty; // e.g., "20ft" or "40ft"
         public string Scope { get; set; } = string.Empty; // Description of the job
         public decimal DepotCharges { get; set; } = 0.0m; // Charges for depot
@@ -43,6 +46,12 @@
                 DepotCharges *= discountFactor;
                 LCLCharges *= discountFactor;
             }
+        }
+
+        // Method to update decision status based on customer choice
+        public void UpdateDecision(string decision)
+        {
+            Decision = decision;
         }
     }
 }

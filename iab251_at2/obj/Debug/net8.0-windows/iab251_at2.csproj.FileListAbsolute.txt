@@ -113,3 +113,5 @@ c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.
 c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\CustomerQuotationOverview.g.cs
 c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\RateSchedule.baml
 c:\Users\conno\OneDrive\Desktop\University\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\RateSchedule.g.cs
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\RateSchedule.baml
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net8.0-windows\RateSchedule.g.cs

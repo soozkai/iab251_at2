@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using iab251_at2.Services;
 
 namespace iab251_at2
 {
@@ -8,6 +9,7 @@ namespace iab251_at2
         public CustomerDashboard()
         {
             InitializeComponent();
+            ShowNotifications(); // Check and show notifications on load
         }
 
         // Method to handle viewing quotations
@@ -30,7 +32,18 @@ namespace iab251_at2
             MessageBox.Show("Logging out");
 
             // Navigate back to the login page or main page
-            NavigationService?.Navigate(new Login()); 
+            NavigationService?.Navigate(new Login());
+        }
+
+        // Method to display notifications
+        private void ShowNotifications()
+        {
+            var notifications = NotificationService.GetUnreadNotifications();
+            foreach (var notification in notifications)
+            {
+                MessageBox.Show(notification.Message, "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                notification.IsRead = true; // Mark notification as read
+            }
         }
     }
 }

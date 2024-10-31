@@ -25,6 +25,7 @@
                 <DataGridTextColumn Header="Client Name" Binding="{Binding ClientName}" Width="*"/>
                 <DataGridTextColumn Header="Date Issued" Binding="{Binding DateIssued, StringFormat=d}" Width="*"/>
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                <DataGridTextColumn Header="Customer Decision" Binding="{Binding Decision}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
