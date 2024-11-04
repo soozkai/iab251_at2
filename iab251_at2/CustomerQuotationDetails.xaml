@@ -4,7 +4,6 @@
       Title="Quotation Details"
       Background="#FFFFFF">
 
-   
     <Page.Resources>
         <DropShadowEffect x:Key="DropShadowEffect" BlurRadius="10" ShadowDepth="5" Opacity="0.5" Color="Black" />
     </Page.Resources>
@@ -16,7 +15,15 @@
             <StackPanel>
                 <TextBlock Text="Quotation Details" FontSize="28" FontWeight="Bold" Foreground="#FF8C00" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
-                <StackPanel HorizontalAlignment="Left" Margin="20">
+                <StackPanel HorizontalAlignment="Left" Margin="20" Width="531" RenderTransformOrigin="0.5,0.5">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.152"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="0.573"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
                     <TextBlock Text="Customer Name:" FontWeight="Bold"/>
                     <TextBlock x:Name="CustomerNameTextBlock" Margin="0,0,0,10"/>
 
@@ -37,11 +44,16 @@
 
                     <TextBlock Text="LCL Delivery Charges:" FontWeight="Bold"/>
                     <TextBlock x:Name="LCLChargesTextBlock" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Discount Applied:" FontWeight="Bold"/>
+                    <TextBlock x:Name="DiscountAppliedTextBlock" Margin="0,0,0,10"/>
                 </StackPanel>
 
+                <!-- Buttons for Accept, Reject, and Submit actions -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
                     <Button Content="Accept" Click="AcceptButton_Click" Width="120" Margin="10" Background="#4CAF50" Foreground="White"/>
                     <Button Content="Reject" Click="RejectButton_Click" Width="120" Margin="10" Background="#F44336" Foreground="White"/>
+                    <Button Content="Submit Quotation" Click="SubmitQuotation_Click" Width="150" Margin="10" Background="#2196F3" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
         </Border>
