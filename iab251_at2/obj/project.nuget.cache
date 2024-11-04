@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IylUY/LTZMM=",
+  "dgSpecHash": "VvexMaPtSM8aQAYSo3489d1Tf9kB1LHXI58jfPI9PUf6JxCUY1z0mEbC6QvvKmw0AlyFmvnqy5qO+jG9BSuiew==",
   "success": true,
-  "projectFilePath": "c:\\Users\\conno\\OneDrive\\Desktop\\University\\iab251_at2\\iab251_at2\\iab251_at2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\conno\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\conno\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\conno\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\conno\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Samantha\\Source\\Repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -46,8 +46,10 @@ namespace iab251_at2
             {
                 MessageBox.Show("Login successful! Welcome, customer.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Navigate to the CustomerDashboard page
-                NavigationService?.Navigate(new CustomerDashboard());
+                // Navigate to the CustomerDashboard page and enable Request Quotation functionality
+                var customerDashboard = new CustomerDashboard();
+                customerDashboard.EnableRequestQuotation(); // Assumes EnableRequestQuotation method is defined in CustomerDashboard
+                NavigationService?.Navigate(customerDashboard);
                 return;
             }
 
@@ -72,7 +74,7 @@ namespace iab251_at2
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = Window.GetWindow(this) as MainWindow;
-            mainWindow?.ShowMainOptions(); 
+            mainWindow?.ShowMainOptions();
         }
     }
 }
