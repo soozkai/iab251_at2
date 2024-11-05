@@ -5,11 +5,20 @@ using Moq; // For mocking NotificationService
 
 namespace iab251_at2.Tests
 {
+    /// <summary>
+    /// Unit tests for the Customer Quotation functionalities.
+    /// </summary>
     [TestFixture]
     public class CustomerQuotationTests
     {
+        /// <summary>
+        /// Mock instance of the notification service for testing.
+        /// </summary>
         private Mock<INotificationService> _mockNotificationService;
 
+        /// <summary>
+        /// Sets up the test environment before each test runs.
+        /// </summary>
         [SetUp]
         public void Setup()
         {
@@ -17,6 +26,9 @@ namespace iab251_at2.Tests
             _mockNotificationService = new Mock<INotificationService>();
         }
 
+        /// <summary>
+        /// Tests that the quotation details are correctly displayed.
+        /// </summary>
         [Test]
         public void ViewQuotation_ShouldDisplayQuotationDetails()
         {
@@ -41,6 +53,9 @@ namespace iab251_at2.Tests
             Assert.AreEqual(200.00m, quotation.LCLCharges);
         }
 
+        /// <summary>
+        /// Tests that accepting a quotation updates its status and sends a notification.
+        /// </summary>
         [Test]
         public void AcceptQuotation_ShouldUpdateStatusAndSendNotification()
         {
@@ -66,6 +81,9 @@ namespace iab251_at2.Tests
                 "Customer has accepted the quotation: Q1001"), Times.Once);
         }
 
+        /// <summary>
+        /// Tests that rejecting a quotation updates its status and sends a notification.
+        /// </summary>
         [Test]
         public void RejectQuotation_ShouldUpdateStatusAndSendNotification()
         {
