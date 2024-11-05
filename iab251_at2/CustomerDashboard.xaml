@@ -3,27 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Background="#FFFFFF">
 
-    <!-- Define Styles in Resources -->
     <Page.Resources>
-        <!-- Style for Header Text -->
-        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="28"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="#FF8C00"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0,0,0,20"/>
-        </Style>
-
-        <!-- Style for Subheader Text -->
-        <Style x:Key="SubHeaderTextStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Foreground" Value="#666666"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0,0,0,30"/>
-        </Style>
-
-        <!-- Style for Modern Buttons with Orange Tone -->
         <Style x:Key="ModernButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#FF8C00"/>
             <Setter Property="Foreground" Value="White"/>
@@ -52,21 +32,15 @@
         </Style>
     </Page.Resources>
 
-    <!-- Main Content -->
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <TextBlock Text="Account Dashboard" FontSize="28" FontWeight="Bold" Foreground="#FF8C00" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <TextBlock Text="Manage your services and account settings:" FontSize="18" FontWeight="SemiBold" Foreground="#666666" HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
-            <!-- Header Text -->
-            <TextBlock Text="Account Dashboard" Style="{StaticResource HeaderTextStyle}"/>
-
-            <!-- Subheader Text -->
-            <TextBlock Text="Manage your services and account settings:" Style="{StaticResource SubHeaderTextStyle}"/>
-
-            <!-- Action Buttons -->
-            <Button Content="Quotation Overview" Click="ViewQuotations_Click" Style="{StaticResource ModernButtonStyle}"/>
+            <Button x:Name="QuotationOverviewButton" Content="Quotation Overview" Click="ViewQuotations_Click" Style="{StaticResource ModernButtonStyle}"/>
+            <Button x:Name="RequestQuotationButton" Content="Request Quotation" Click="RequestQuotation_Click" Style="{StaticResource ModernButtonStyle}"/>
             <Button Content="Account Details" Click="Profile_Click" Style="{StaticResource ModernButtonStyle}"/>
             <Button Content="Sign Out" Click="Logout_Click" Style="{StaticResource ModernButtonStyle}"/>
-
         </StackPanel>
     </Grid>
 </Page>

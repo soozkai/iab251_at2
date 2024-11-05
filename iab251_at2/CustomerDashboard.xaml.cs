@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using iab251_at2.Models;
 using iab251_at2.Services;
 
 namespace iab251_at2
@@ -10,7 +11,7 @@ namespace iab251_at2
         {
             InitializeComponent();
             ShowNotifications(); // Check and show notifications on load
-            RequestQuotationButton.IsEnabled = false; // Disable initially until login enables it
+            QuotationOverviewButton.IsEnabled = false; // Disable initially until login enables it
         }
 
         // Method to enable the "Request Quotation" feature after login
@@ -19,12 +20,11 @@ namespace iab251_at2
             RequestQuotationButton.IsEnabled = true; // Assumes a button named RequestQuotationButton in XAML
         }
 
-        // Click event for the "Request Quotation" button
         private void RequestQuotation_Click(object sender, RoutedEventArgs e)
         {
             if (RequestQuotationButton.IsEnabled)
             {
-                NavigationService?.Navigate(new RequestQuotationPage()); // Navigate to the Request Quotation page
+                NavigationService?.Navigate(new RequestQuotation()); // Navigate to the Request Quotation page
             }
             else
             {

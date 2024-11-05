@@ -1,0 +1,77 @@
+﻿<Page x:Class="iab251_at2.RequestQuotation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Request Quotation"
+      Background="#FFFFFF">
+
+    <Page.Resources>
+        <DropShadowEffect x:Key="DropShadowEffect" BlurRadius="10" ShadowDepth="5" Opacity="0.5" Color="Black" />
+    </Page.Resources>
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40">
+        <Border Background="White" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="10" Padding="20"
+                HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Effect="{StaticResource DropShadowEffect}">
+
+            <StackPanel>
+                <TextBlock Text="Request Quotation" FontSize="28" FontWeight="Bold" Foreground="#FF8C00" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+                <StackPanel HorizontalAlignment="Left" Margin="20" Width="531">
+                    <!-- Request ID -->
+                    <TextBlock Text="Request ID:" FontWeight="Bold"/>
+                    <TextBox x:Name="RequestIDTextBox" Margin="0,0,0,10" />
+
+                    <!-- Customer Name -->
+                    <TextBlock Text="Customer Name:" FontWeight="Bold"/>
+                    <TextBox x:Name="NameTextBox" Margin="0,0,0,10"/>
+
+                    <!-- Email -->
+                    <TextBlock Text="Email:" FontWeight="Bold"/>
+                    <TextBox x:Name="EmailTextBox" Margin="0,0,0,10"/>
+
+                    <!-- Source Location -->
+                    <TextBlock Text="Source Location:" FontWeight="Bold"/>
+                    <TextBox x:Name="SourceTextBox" Margin="0,0,0,10"/>
+
+                    <!-- Destination Location -->
+                    <TextBlock Text="Destination Location:" FontWeight="Bold"/>
+                    <TextBox x:Name="DestinationTextBox" Margin="0,0,0,10"/>
+
+                    <!-- Number of Containers -->
+                    <TextBlock Text="Number of Containers:" FontWeight="Bold"/>
+                    <TextBox x:Name="ContainersTextBox"  Margin="0,0,0,10"/>
+
+                    <!-- Nature of the Package -->
+                    <TextBlock Text="Nature of the Package:" FontWeight="Bold"/>
+                    <TextBox x:Name="PackageNatureTextBox" Margin="0,0,0,10"/>
+
+                    <!-- Nature of the Job -->
+                    <TextBlock Text="Nature of the Job:" FontWeight="Bold"/>
+                    <ComboBox x:Name="JobNatureComboBox" Margin="0,0,0,10">
+                        <ComboBoxItem Content="Import"/>
+                        <ComboBoxItem Content="Export"/>
+                        <ComboBoxItem Content="N/A"/>
+                    </ComboBox>
+                    <ComboBox x:Name="PackingComboBox" Margin="0,0,0,10">
+                        <ComboBoxItem Content="Packing"/>
+                        <ComboBoxItem Content="Unpacking"/>
+                        <ComboBoxItem Content="Both"/>
+                        <ComboBoxItem Content="None"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Quarantine Requirements:" FontWeight="Bold"/>
+                    <TextBox x:Name="QuarantineTextBox" Margin="0,0,0,10"/>
+
+                    <!-- Date Picker -->
+                    <TextBlock Text="Request Date:" FontWeight="Bold"/>
+                    <DatePicker x:Name="RequestDatePicker" Margin="0,0,0,10"/>
+                </StackPanel>
+
+                <!-- Submit Button -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button Content="Submit Request" Click="SubmitRequest_Click" Width="120" Margin="10" Background="#4CAF50" Foreground="White"/>
+                    <Button Content="Cancel" Width="120" Margin="10" Background="#F44336" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

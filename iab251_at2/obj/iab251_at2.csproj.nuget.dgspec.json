@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samantha\\Source\\Repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj": {}
+    "C:\\Users\\Samantha\\source\\repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samantha\\Source\\Repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj": {
+    "C:\\Users\\Samantha\\source\\repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samantha\\Source\\Repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj",
+        "projectUniqueName": "C:\\Users\\Samantha\\source\\repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj",
         "projectName": "iab251_at2",
-        "projectPath": "C:\\Users\\Samantha\\Source\\Repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj",
+        "projectPath": "C:\\Users\\Samantha\\source\\repos\\iab251_at2\\iab251_at2\\iab251_at2.csproj",
         "packagesPath": "C:\\Users\\Samantha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samantha\\Source\\Repos\\iab251_at2\\iab251_at2\\obj\\",
+        "outputPath": "C:\\Users\\Samantha\\source\\repos\\iab251_at2\\iab251_at2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
