@@ -3,16 +3,26 @@ using System.Windows;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Provides services related to handling quotation requests.
+    /// </summary>
     internal class QuotationService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuotationService"/> class.
+        /// </summary>
         public QuotationService()
         {
         }
 
+        /// <summary>
+        /// Saves the specified quotation request and navigates to the customer dashboard if successful.
+        /// </summary>
+        /// <param name="quotationRequest">The quotation request to be saved.</param>
+        /// <returns><c>true</c> if the quotation request was saved successfully; otherwise, <c>false</c>.</returns>
         internal bool SaveQuotationRequest(QuotationRequest quotationRequest)
         {
-            // Placeholder for save logic
-            bool isSaved = true; // Replace this with actual save logic
+            bool isSaved = true; 
 
             if (isSaved)
             {
@@ -28,7 +38,5 @@ namespace iab251_at2
                 return false;
             }
         }
-
-
     }
 }

@@ -1,21 +1,28 @@
 using System.Collections.Generic;
 using System.Windows;
-using System.Xml.Serialization;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents a window that displays the rate schedule for various services.
+    /// </summary>
     public partial class RateSchedule : Window
     {
-        //Initalize the component to load up in the program and load the rate schedule into the grid
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RateSchedule"/> class.
+        /// </summary>
         public RateSchedule()
         {
             InitializeComponent();
             LoadRateSchedule();
         }
-        //Create the rate schedule information and put into the grid
+
+        /// <summary>
+        /// Loads the rate schedule information into the data grid.
+        /// </summary>
         private void LoadRateSchedule()
         {
-            //The information to be inputed into the grid.
+            // The information to be inputted into the grid.
             var rates = new List<Rate>
             {
                 new Rate { Type = "Walf Booking Fee", Fee20Ft = "$60", Fee40Ft = "$70" },
@@ -32,18 +39,33 @@ namespace iab251_at2
             RateScheduleDataGrid.ItemsSource = rates;
         }
 
-        //give the close button an action to close the window
+        /// <summary>
+        /// Closes the rate schedule window when the close button is clicked.
+        /// </summary>
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
     }
 
-    //define the rate model so that it can load data into each row of the grid
+    /// <summary>
+    /// Represents a rate for a specific service type.
+    /// </summary>
     public class Rate
     {
+        /// <summary>
+        /// Gets or sets the type of service.
+        /// </summary>
         public string Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fee for a 20 ft container.
+        /// </summary>
         public string Fee20Ft { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fee for a 40 ft container.
+        /// </summary>
         public string Fee40Ft { get; set; }
     }
 }

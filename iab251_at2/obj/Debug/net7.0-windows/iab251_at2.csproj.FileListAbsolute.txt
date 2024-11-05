@@ -122,3 +122,5 @@ C:\Users\Samantha\Source\Repos\iab251_at2\iab251_at2\obj\Debug\net7.0-windows\ia
 C:\Users\Samantha\Source\Repos\iab251_at2\iab251_at2\obj\Debug\net7.0-windows\ref\iab251_at2.dll
 C:\Users\Samantha\source\repos\iab251_at2\iab251_at2\obj\Debug\net7.0-windows\RequestQuotation.baml
 C:\Users\Samantha\source\repos\iab251_at2\iab251_at2\obj\Debug\net7.0-windows\RequestQuotation.g.cs
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net7.0-windows\RequestQuotation.baml
+C:\Users\User\Desktop\iab251\iab251_at2\iab251_at2\obj\Debug\net7.0-windows\RequestQuotation.g.cs

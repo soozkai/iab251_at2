@@ -6,10 +6,18 @@ using iab251_at2.Services;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents the details of a customer quotation, allowing the customer to accept or reject it.
+    /// </summary>
     public partial class CustomerQuotationDetails : Page
     {
         private Quotation _quotation;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomerQuotationDetails"/> class.
+        /// If a quotation is provided, it populates the details; otherwise, creates a new quotation.
+        /// </summary>
+        /// <param name="quotation">The quotation to be displayed (optional).</param>
         public CustomerQuotationDetails(Quotation quotation = null)
         {
             InitializeComponent();
@@ -24,7 +32,10 @@ namespace iab251_at2
             PopulateDetails();
         }
 
-        // Method to create a new quotation request
+        /// <summary>
+        /// Creates a new quotation request with default values and applies any applicable discounts.
+        /// </summary>
+        /// <returns>A new instance of the <see cref="Quotation"/> class.</returns>
         private Quotation CreateNewQuotation()
         {
             var newQuotation = new Quotation
@@ -50,7 +61,9 @@ namespace iab251_at2
             return newQuotation;
         }
 
-        // Populate UI elements with quotation details
+        /// <summary>
+        /// Populates the UI elements with the details of the current quotation.
+        /// </summary>
         private void PopulateDetails()
         {
             CustomerNameTextBlock.Text = _quotation.ClientName;
@@ -63,7 +76,9 @@ namespace iab251_at2
             DiscountAppliedTextBlock.Text = $"{_quotation.DiscountPercentage}%";
         }
 
-        // Accept or Reject the quotation
+        /// <summary>
+        /// Accepts the current quotation and sends a notification to the quotation officer.
+        /// </summary>
         public void AcceptQuotation()
         {
             _quotation.Status = "Accepted";
@@ -73,6 +88,9 @@ namespace iab251_at2
             );
         }
 
+        /// <summary>
+        /// Rejects the current quotation and sends a notification to the quotation officer.
+        /// </summary>
         public void RejectQuotation()
         {
             _quotation.Status = "Rejected";
@@ -82,21 +100,35 @@ namespace iab251_at2
             );
         }
 
-        // Event handler for accepting quotation
+        /// <summary>
+        /// Event handler for the Accept button click event. 
+        /// Accepts the quotation and shows a success message.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void AcceptButton_Click(object sender, RoutedEventArgs e)
         {
             AcceptQuotation();
             MessageBox.Show("Quotation Accepted", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        // Event handler for rejecting quotation
+        /// <summary>
+        /// Event handler for the Reject button click event. 
+        /// Rejects the quotation and shows a success message.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void RejectButton_Click(object sender, RoutedEventArgs e)
         {
             RejectQuotation();
             MessageBox.Show("Quotation Rejected", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        // Submit the new quotation request
+        /// <summary>
+        /// Submits the new quotation request and shows a submission success message.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void SubmitQuotation_Click(object sender, RoutedEventArgs e)
         {
             // Assuming quotation is validated and ready for submission

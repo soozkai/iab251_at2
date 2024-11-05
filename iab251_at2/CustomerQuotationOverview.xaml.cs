@@ -7,8 +7,15 @@ using iab251_at2.Services;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents the overview page for customer quotations, allowing customers to view their quotations and notifications.
+    /// </summary>
     public partial class CustomerQuotationOverview : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomerQuotationOverview"/> class.
+        /// Loads the quotations and displays notifications on page load.
+        /// </summary>
         public CustomerQuotationOverview()
         {
             InitializeComponent();
@@ -16,6 +23,9 @@ namespace iab251_at2
             ShowNotifications(); // Call to display notifications on page load
         }
 
+        /// <summary>
+        /// Loads the customer's quotations into the view.
+        /// </summary>
         private void LoadQuotations()
         {
             QuotationListView.ItemsSource = new List<Quotation>
@@ -45,6 +55,9 @@ namespace iab251_at2
             };
         }
 
+        /// <summary>
+        /// Displays any unread notifications for the customer when the page is loaded.
+        /// </summary>
         private void ShowNotifications()
         {
             var notifications = NotificationService.GetUnreadNotifications();
@@ -55,6 +68,12 @@ namespace iab251_at2
             }
         }
 
+        /// <summary>
+        /// Handles the click event for viewing the details of a selected quotation.
+        /// Navigates to the <see cref="CustomerQuotationDetails"/> page with the selected quotation.
+        /// </summary>
+        /// <param name="sender">The button that was clicked.</param>
+        /// <param name="e">The event data for the click event.</param>
         private void ViewDetails_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;

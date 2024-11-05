@@ -3,10 +3,17 @@ using iab251_at2.Models;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents the window that displays detailed information about a quotation.
+    /// </summary>
     public partial class QuotationDetails : Window
     {
         private Quotation _quotation;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuotationDetails"/> class.
+        /// </summary>
+        /// <param name="quotation">The quotation object containing details to display.</param>
         public QuotationDetails(Quotation quotation)
         {
             InitializeComponent();
@@ -15,6 +22,9 @@ namespace iab251_at2
             CheckForDiscount();
         }
 
+        /// <summary>
+        /// Populates the UI elements with the details of the quotation.
+        /// </summary>
         private void PopulateDetails()
         {
             ContainerTypeTextBlock.Text = _quotation.ContainerType;
@@ -27,6 +37,10 @@ namespace iab251_at2
             DiscountAppliedTextBlock.Text = $"{_quotation.DiscountPercentage}%";
         }
 
+        /// <summary>
+        /// Checks if there is a discount available for the quotation.
+        /// If a discount is available, prompts the user to apply it.
+        /// </summary>
         private void CheckForDiscount()
         {
             double discount = _quotation.CalculateDiscount();
@@ -53,6 +67,10 @@ namespace iab251_at2
             }
         }
 
+        /// <summary>
+        /// Event handler for the Back button click event.
+        /// Closes the quotation details window.
+        /// </summary>
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close(); // Close the details window

@@ -6,13 +6,25 @@ using iab251_at2.Services;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents the page for requesting a quotation.
+    /// </summary>
     public partial class RequestQuotation : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RequestQuotation"/> class.
+        /// </summary>
         public RequestQuotation()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the click event for submitting a quotation request.
+        /// Retrieves data from input fields, validates it, and saves the request.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void SubmitRequest_Click(object sender, RoutedEventArgs e)
         {
             // Step 1: Retrieve data from input fields
@@ -63,7 +75,7 @@ namespace iab251_at2
             if (isSaved)
             {
                 MessageBox.Show("Request submitted successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                ClearFields(); // Optional: clear fields after submission
+                ClearFields();
             }
             else
             {
@@ -71,7 +83,9 @@ namespace iab251_at2
             }
         }
 
-        // Helper method to clear the input fields after submission
+        /// <summary>
+        /// Clears the input fields after submission.
+        /// </summary>
         private void ClearFields()
         {
             RequestIDTextBox.Clear();

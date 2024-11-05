@@ -7,13 +7,26 @@ using System.Windows.Controls;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents the login page where users can authenticate themselves.
+    /// </summary>
     public partial class Login : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Login"/> class.
+        /// </summary>
         public Login()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the click event of the login button. Validates user input,
+        /// checks the entered credentials against registered employees and customers,
+        /// and navigates to the appropriate dashboard upon successful login.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string username = UsernameTextBox.Text;
@@ -57,6 +70,11 @@ namespace iab251_at2
             MessageBox.Show("Invalid username or password.", "Authentication Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        /// <summary>
+        /// Hashes the provided password using SHA256 to ensure secure storage.
+        /// </summary>
+        /// <param name="password">The password to hash.</param>
+        /// <returns>The hashed password as a hexadecimal string.</returns>
         private string HashPassword(string password)
         {
             using (SHA256 sha256Hash = SHA256.Create())
@@ -71,6 +89,11 @@ namespace iab251_at2
             }
         }
 
+        /// <summary>
+        /// Handles the click event of the cancel button to navigate back to the main options.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = Window.GetWindow(this) as MainWindow;

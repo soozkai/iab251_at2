@@ -8,16 +8,25 @@ using iab251_at2.Services;
 
 namespace iab251_at2
 {
+    /// <summary>
+    /// Represents the window for viewing quotations.
+    /// </summary>
     public partial class ViewQuotations : Window
     {
         private List<Quotation> quotations;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ViewQuotations"/> class.
+        /// </summary>
         public ViewQuotations()
         {
             InitializeComponent();
             LoadQuotations();
         }
 
+        /// <summary>
+        /// Loads the sample quotations into the data grid.
+        /// </summary>
         private void LoadQuotations()
         {
             // Sample quotations with various statuses
@@ -70,6 +79,11 @@ namespace iab251_at2
             QuotationDataGrid.ItemsSource = quotations;
         }
 
+        /// <summary>
+        /// Handles the mouse double-click event on the quotation data grid to view details.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void QuotationDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var selectedQuotation = (Quotation)QuotationDataGrid.SelectedItem;
@@ -84,6 +98,11 @@ namespace iab251_at2
             }
         }
 
+        /// <summary>
+        /// Handles the selection change event in the quotation data grid to enable or disable buttons.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void QuotationDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedQuotation = (Quotation)QuotationDataGrid.SelectedItem;
@@ -91,6 +110,11 @@ namespace iab251_at2
             RejectButton.IsEnabled = selectedQuotation != null;
         }
 
+        /// <summary>
+        /// Handles the click event for accepting a quotation.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void AcceptButton_Click(object sender, RoutedEventArgs e)
         {
             var selectedQuotation = (Quotation)QuotationDataGrid.SelectedItem;
@@ -109,6 +133,11 @@ namespace iab251_at2
             }
         }
 
+        /// <summary>
+        /// Handles the click event for rejecting a quotation.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void RejectButton_Click(object sender, RoutedEventArgs e)
         {
             var selectedQuotation = (Quotation)QuotationDataGrid.SelectedItem;
@@ -127,7 +156,11 @@ namespace iab251_at2
             }
         }
 
-        // Method to show a notification to the Customer with updated status
+        /// <summary>
+        /// Shows a notification to the Customer with the updated status of the quotation.
+        /// </summary>
+        /// <param name="quotation">The quotation that was accepted or rejected.</param>
+        /// <param name="decision">The decision made on the quotation (accepted or rejected).</param>
         private void ShowNotification(Quotation quotation, string decision)
         {
             QuotationDataGrid.Items.Refresh();
@@ -146,7 +179,11 @@ namespace iab251_at2
             }
         }
 
-        // Method to simulate sending a message on acceptance
+        /// <summary>
+        /// Simulates sending a message on acceptance.
+        /// </summary>
+        /// <param name="clientName">The name of the client.</param>
+        /// <param name="quotationNumber">The quotation number.</param>
         private void SendAcceptanceMessage(string clientName, string quotationNumber)
         {
             MessageBox.Show(
@@ -154,7 +191,11 @@ namespace iab251_at2
                 "Message Sent", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        // Method to simulate sending a message on rejection
+        /// <summary>
+        /// Simulates sending a message on rejection.
+        /// </summary>
+        /// <param name="clientName">The name of the client.</param>
+        /// <param name="quotationNumber">The quotation number.</param>
         private void SendRejectionMessage(string clientName, string quotationNumber)
         {
             MessageBox.Show(
